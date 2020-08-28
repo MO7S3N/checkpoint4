@@ -1,0 +1,6 @@
+<div class="split left">
+<app-list (choosed)="choose($event)" [personnes]="personnes"></app-list>
+</div>
+<div class="split right">
+  <app-detail [personne]="choosed"></app-detail>
+</div>
