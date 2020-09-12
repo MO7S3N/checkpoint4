@@ -7,6 +7,7 @@ import { CvComponent } from './cv/cv.component';
 import { ListComponent } from './cv/list/list.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { ItemComponent } from './cv/item/item.component';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ItemComponent } from './cv/item/item.component';
     ListComponent,
     DetailComponent,
     ItemComponent,
+    DefaultImagePipe,
 
   ],
   imports: [
