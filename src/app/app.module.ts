@@ -9,6 +9,7 @@ import { ItemComponent } from './cv/item/item.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { TodoComponent } from './todo/todo.component';
 import {FormsModule} from '@angular/forms';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 
 
@@ -21,6 +22,7 @@ import {FormsModule} from '@angular/forms';
     ItemComponent,
     DefaultImagePipe,
     TodoComponent,
+    EmbaucheComponent,
 
 
 

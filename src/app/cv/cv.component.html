@@ -1,6 +1,11 @@
-<div class="split left">
-<app-list (choosed)="choose($event)" [personnes]="personnes"></app-list>
+<div class="row">
+  <div class="col-md-4">
+  <app-list (choosed)="choose($event)" [personnes]="personnes"></app-list>
+  </div>
+  <div class="col-md-8">
+    <app-detail [personne]="choosed"></app-detail>
+  </div>
 </div>
-<div class="split right">
-  <app-detail [personne]="choosed"></app-detail>
+<div class="row">
+  <app-embauche></app-embauche>
 </div>
