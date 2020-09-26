@@ -11,6 +11,7 @@ import { TodoComponent } from './todo/todo.component';
 import {FormsModule} from '@angular/forms';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
+import { RoutersimulatorComponent } from './routersimulator/routersimulator.component';
 
 
 
@@ -25,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
+    RoutersimulatorComponent,
 
 
 
