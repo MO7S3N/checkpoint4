@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { RoutersimulatorComponent } from './routersimulator/routersimulator.component';
+import { ColorComponent } from './color/color.component';
 
 
 
@@ -27,6 +28,7 @@ import { RoutersimulatorComponent } from './routersimulator/routersimulator.comp
     EmbaucheComponent,
     HeaderComponent,
     RoutersimulatorComponent,
+    ColorComponent,
 
 
 
