@@ -15,6 +15,7 @@ import { RoutersimulatorComponent } from './routersimulator/routersimulator.comp
 import { ColorComponent } from './color/color.component';
 import { AddcvComponent } from './cv/addcv/addcv.component';
 import { DeletecvComponent } from './cv/deletecv/deletecv.component';
+import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
 
 
 
@@ -33,6 +34,7 @@ import { DeletecvComponent } from './cv/deletecv/deletecv.component';
     ColorComponent,
     AddcvComponent,
     DeletecvComponent,
+    DetailpersonComponent,
 
 
 

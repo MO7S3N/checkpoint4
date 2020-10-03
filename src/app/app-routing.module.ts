@@ -5,14 +5,17 @@ import { AddcvComponent } from './cv/addcv/addcv.component';
 import { CvComponent } from './cv/cv.component';
 import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 import { DetailComponent } from './cv/detail/detail.component';
+import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
+import { CvService } from './cv/services/cv.service';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   {
     path : 'cv' ,  children : [
-      {path : ' ', component : CvComponent},
+      {path : '', component : CvComponent},
       {path : 'add' , component : AddcvComponent},
       {path : 'delete' , component : DeletecvComponent},
+      {path : ':id', component : DetailpersonComponent}
     ]
   }
   ,
