@@ -13,6 +13,8 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { RoutersimulatorComponent } from './routersimulator/routersimulator.component';
 import { ColorComponent } from './color/color.component';
+import { AddcvComponent } from './cv/addcv/addcv.component';
+import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 
 
 
@@ -29,6 +31,8 @@ import { ColorComponent } from './color/color.component';
     HeaderComponent,
     RoutersimulatorComponent,
     ColorComponent,
+    AddcvComponent,
+    DeletecvComponent,
 
 
 

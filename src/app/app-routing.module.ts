@@ -1,13 +1,19 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ColorComponent } from './color/color.component';
+import { AddcvComponent } from './cv/addcv/addcv.component';
 import { CvComponent } from './cv/cv.component';
+import { DeletecvComponent } from './cv/deletecv/deletecv.component';
+import { DetailComponent } from './cv/detail/detail.component';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
   {
-    path : "cv",
-    component : CvComponent
+    path : 'cv' ,  children : [
+      {path : ' ', component : CvComponent},
+      {path : 'add' , component : AddcvComponent},
+      {path : 'delete' , component : DeletecvComponent},
+    ]
   }
   ,
   {
