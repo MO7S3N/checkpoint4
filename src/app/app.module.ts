@@ -16,6 +16,7 @@ import { ColorComponent } from './color/color.component';
 import { AddcvComponent } from './cv/addcv/addcv.component';
 import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -35,6 +36,7 @@ import { DetailpersonComponent } from './cv/detailperson/detailperson.component'
     AddcvComponent,
     DeletecvComponent,
     DetailpersonComponent,
+    LoginComponent,
 
 
 

@@ -7,6 +7,7 @@ import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
 import { CvService } from './cv/services/cv.service';
+import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   {
     path :"color/:color",
     component : ColorComponent
-  }
+  },
+  {path : "login" , component : LoginComponent}
 
 ];
 

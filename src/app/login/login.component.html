@@ -1,0 +1,29 @@
+<form
+#loginForm="ngForm">
+  <input
+  type="text"
+  name="email"
+  class="form-control"
+  ngModel
+  required
+  email
+  >
+
+  <input
+  type="password"
+  name="password"
+  class="form-control"
+  ngModel
+  required
+  >
+  <button
+   (click)="login(loginForm)"
+   [disabled]="loginForm.invalid"
+   class="btn btn-primary">
+    login
+  </button>
+
+
+
+
+</form>
