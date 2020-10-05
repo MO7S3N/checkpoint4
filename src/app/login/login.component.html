@@ -7,15 +7,27 @@
   ngModel
   required
   email
+  #email ="ngModel"
   >
-
+  <div
+  *ngIf="email.invalid && email.touched"
+  class="alert alert-danger">
+      votre mail est incorrect , veuillez saisir un mail valide
+  </div>
   <input
   type="password"
   name="password"
   class="form-control"
   ngModel
   required
+  minlength="6"
+  #password= "ngModel"
   >
+  <div
+  *ngIf="password.invalid && password.touched"
+   class="alert alert-danger">
+    le mot de passe doit contenir plus que 6 caractere
+  </div>
   <button
    (click)="login(loginForm)"
    [disabled]="loginForm.invalid"
