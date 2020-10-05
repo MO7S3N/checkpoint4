@@ -1,1 +1,45 @@
-<p>addcv works!</p>
+<form #personneForm="ngForm">
+ name :
+ <input
+  ngModel
+  required
+  name="name"
+  type="text" class="form-control"
+  >
+
+ firstname:
+ <input
+  ngModel
+  required
+  name="firstname"
+  type="text"  class="form-control">
+ job:
+ <input
+  ngModel
+  name="job"
+  type="text"  class="form-control">
+ path:
+ <input
+  ngModel
+  name="path"
+  type="text"  class="form-control">
+  age:
+ <input
+  ngModel
+  required
+  name="age"
+  pattern="[0-1]?\d{1,2}"
+  type="number"  class="form-control">
+  cin:
+ <input
+  ngModel
+  required
+  name="cin"
+  type="number"  class="form-control">
+</form>
+<button
+ [disabled]="personneForm.invalid"
+ (click)="addPersonne(personneForm.value)"
+ class="btn btn-primary">
+  Add personne
+</button>
