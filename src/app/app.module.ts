@@ -17,6 +17,7 @@ import { AddcvComponent } from './cv/addcv/addcv.component';
 import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
 import { LoginComponent } from './login/login.component';
+import { SliderObservableComponent } from './asyncProg/slider-observable/slider-observable.component';
 
 
 
@@ -37,6 +38,7 @@ import { LoginComponent } from './login/login.component';
     DeletecvComponent,
     DetailpersonComponent,
     LoginComponent,
+    SliderObservableComponent,
 
 
 
