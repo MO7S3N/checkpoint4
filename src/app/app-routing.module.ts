@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SliderObservableComponent } from './asyncProg/slider-observable/slider-observable.component';
 import { ColorComponent } from './color/color.component';
 import { AddcvComponent } from './cv/addcv/addcv.component';
 import { CvComponent } from './cv/cv.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
     path :"color/:color",
     component : ColorComponent
   },
-  {path : "login" , component : LoginComponent}
+  {path : "login" , component : LoginComponent},
+  {path : "asyncpipe" , component : SliderObservableComponent}
 
 ];
 

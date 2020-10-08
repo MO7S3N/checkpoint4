@@ -1,9 +1,10 @@
 <div class="row">
   <div class="col-md-4">
-  <app-list (choosed)="choose($event)" [personnes]="personnes"></app-list>
+  <app-list></app-list>
+  <!-- (choosed)="choose($event)" [personnes]="personnes" -->
   </div>
   <div class="col-md-8">
-    <app-detail [personne]="choosed"></app-detail>
+    <app-detail></app-detail>
   </div>
 </div>
 <div class="row">

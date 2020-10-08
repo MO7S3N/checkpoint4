@@ -17,8 +17,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.personnes= this.cvService.getPersonne();
   }
-  choose(choosed)
+  /*choose(choosed)
   {
      this.choosed.emit(choosed);
-  }
+  }*/
 }

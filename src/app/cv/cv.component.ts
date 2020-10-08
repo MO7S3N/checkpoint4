@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from 'src/app/model/personne';
+import { CvService } from './services/cv.service';
 
 
 @Component({
@@ -9,8 +10,8 @@ import {Personne} from 'src/app/model/personne';
 })
 export class CvComponent implements OnInit {
   personnes : Personne[];
-  choosed : Personne;
-  constructor() { }
+  //choosed : Personne;
+  constructor(private CvService : CvService) { }
 
   ngOnInit(): void {
     this.personnes = [
@@ -20,8 +21,8 @@ export class CvComponent implements OnInit {
 
     ];
   }
-choose(personne)
+/*choose(personne)
 {
 this.choosed=personne;
-}
+}*/
 }
