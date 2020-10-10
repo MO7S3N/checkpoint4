@@ -18,6 +18,7 @@ import { DeletecvComponent } from './cv/deletecv/deletecv.component';
 import { DetailpersonComponent } from './cv/detailperson/detailperson.component';
 import { LoginComponent } from './login/login.component';
 import { SliderObservableComponent } from './asyncProg/slider-observable/slider-observable.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -42,11 +43,15 @@ import { SliderObservableComponent } from './asyncProg/slider-observable/slider-
 
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

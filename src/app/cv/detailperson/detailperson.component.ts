@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Personne } from 'src/app/model/personne';
@@ -15,20 +16,21 @@ export class DetailpersonComponent implements OnInit {
   constructor(
     private activatedroute : ActivatedRoute,
     private cvService : CvService,
-    private router : Router
+    private router : Router,
+    private http : HttpClient
     ) { }
 
   ngOnInit(): void {
     this.activatedroute.params.subscribe(params =>
     {
-      this.personne = this.cvService.getPersonnebyid(params.id);
-      if(!this.personne)
-        {
-
-          this.router.navigate(LINK);
-        }
-    });
+      this.cvService.getPersonnebyid(params.id).subscribe(
+        (personne)=>this.personne=personne,
+        (erreur)=> this.router.navigate(LINK)
+      );
+     }
+    );
   }
+
 
   deletepersonne()
   {

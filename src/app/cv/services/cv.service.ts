@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Personne } from 'src/app/model/personne';
+
+const API_LINK="https://immense-citadel-91115.herokuapp.com/api/personnes/";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,7 @@ export class CvService {
   clickSubject = new Subject <number> ();
   nbclick=0;
   selectitemsubject = new Subject <Personne>();
-  constructor()
+  constructor(private http : HttpClient)
   {
     this.personnes = [
       new Personne ( 1, 'khefacha', 'mohsen', 22, 1111, 'etudiant', '2.jpg'),
@@ -19,17 +22,28 @@ export class CvService {
 
                      ];
   }
-  getPersonne()
+  getFakePersonne()
   {
     return this.personnes;
   }
 
-  getPersonnebyid(id):Personne
+  getPersonne() : Observable <Personne[]>
+  {
+    return this.http.get<Personne[]>(API_LINK);
+  }
+
+  getFakePersonnebyid(id):Personne
   {
     return this.personnes.find((Personne) => Personne.id === +id
     );
 
   }
+
+  getPersonnebyid(id):Observable<Personne[]>
+  {
+     return this.http.get<Personne[]>(API_LINK+id);
+  }
+
   deletepersonne(personne : Personne)
   {
     const index = this.personnes.indexOf(personne);

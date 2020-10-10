@@ -15,7 +15,13 @@ export class ListComponent implements OnInit {
   }
   @Output() choosed = new EventEmitter();
   ngOnInit(): void {
-    this.personnes= this.cvService.getPersonne();
+    this.cvService.getPersonne().subscribe(
+      (personnes)=> this.personnes = personnes,
+      (erreur)=>
+      { this.personnes=this.cvService.getFakePersonne();
+        alert('probleme de connexion les donnees  sont fake');
+      }
+    );
   }
   /*choose(choosed)
   {
