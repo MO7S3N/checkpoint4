@@ -1,4 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { getLocaleCurrencySymbol } from '@angular/common';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Personne } from 'src/app/model/personne';
@@ -39,9 +41,11 @@ export class CvService {
 
   }
 
-  getPersonnebyid(id):Observable<Personne[]>
+  getPersonnebyid(id):Observable<Personne>
   {
-     return this.http.get<Personne[]>(API_LINK+id);
+     const headers=new HttpHeaders().set('Authorization','aymen');
+     const params = new HttpParams().set('codeacess','123456789').set('age','22');
+     return this.http.get<Personne>(API_LINK+id,{headers,params});
   }
 
   deletepersonne(personne : Personne)
@@ -60,11 +64,22 @@ export class CvService {
 
   }
 
-  addpersonne(personne : Personne)
+  addfakepersonne(personne : Personne)
   {
     const id = this.personnes[this.personnes.length -1].id;
     personne.id= id + 1 ;
     this.personnes.push(personne);
+  }
+
+  addpersonne(personne:Personne)
+  {
+    const token = localStorage.getItem('token');
+    if(token)
+    {
+      const headers=new HttpHeaders().set('Authorization',token)
+      return this.http.post(API_LINK,personne,{headers});
+    }
+    return this.http.post(API_LINK,personne);
   }
 
   click()

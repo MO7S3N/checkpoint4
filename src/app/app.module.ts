@@ -19,6 +19,7 @@ import { DetailpersonComponent } from './cv/detailperson/detailperson.component'
 import { LoginComponent } from './login/login.component';
 import { SliderObservableComponent } from './asyncProg/slider-observable/slider-observable.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HttpComponent } from './http/http.component';
 
 
 
@@ -40,6 +41,7 @@ import {HttpClientModule} from "@angular/common/http";
     DetailpersonComponent,
     LoginComponent,
     SliderObservableComponent,
+    HttpComponent,
 
 
 

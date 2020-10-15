@@ -15,10 +15,17 @@ export class AddcvComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   addPersonne(personne: Personne)
   {  const LINK= ['cv'];
-     this.cvService.addpersonne(personne);
-     this.router.navigate(LINK);
+     this.cvService.addpersonne(personne).subscribe(
+       (success)=>{
+          const LINK= ['cv'];
+          this.router.navigate(LINK);
+       },
+       (erreur)=>console.log(erreur)
+     );
+
   }
 
 }

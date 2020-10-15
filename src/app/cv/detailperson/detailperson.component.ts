@@ -13,6 +13,7 @@ const LINK = ['cv'] ;
 })
 export class DetailpersonComponent implements OnInit {
   personne : Personne;
+
   constructor(
     private activatedroute : ActivatedRoute,
     private cvService : CvService,
@@ -20,12 +21,12 @@ export class DetailpersonComponent implements OnInit {
     private http : HttpClient
     ) { }
 
-  ngOnInit(): void {
-    this.activatedroute.params.subscribe(params =>
-    {
-      this.cvService.getPersonnebyid(params.id).subscribe(
-        (personne)=>this.personne=personne,
-        (erreur)=> this.router.navigate(LINK)
+  ngOnInit() {
+    this.activatedroute.params.subscribe(
+      (params) => {
+              this.cvService.getPersonnebyid(params.id).subscribe(
+              (personne )=> this.personne = personne,
+              (erreur)=> this.router.navigate(LINK)
       );
      }
     );

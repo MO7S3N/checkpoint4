@@ -20,13 +20,13 @@
   class="form-control"
   ngModel
   required
-  minlength="6"
+  minlength="4"
   #password= "ngModel"
   >
   <div
   *ngIf="password.invalid && password.touched"
    class="alert alert-danger">
-    le mot de passe doit contenir plus que 6 caractere
+    le mot de passe doit contenir plus que 4 caractere
   </div>
   <button
    (click)="login(loginForm)"
