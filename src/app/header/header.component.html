@@ -13,9 +13,16 @@
       <a class="navbar-brand" [routerLink]="['cv/delete']" routerLinkActive="active">cvTEch/add</a>
       <a class="navbar-brand" [routerLink]="['todo']" routerLinkActive="active"> Todo</a>
       <a class="navbar-brand" [routerLink]="['color/:color']" routerLinkActive="active">color</a>
-      <a class="navbar-brand" [routerLink]="['login']" routerLinkActive="active">login</a>
+      <a
+       *ngIf="!authentificationService.isauth()"
+       class="navbar-brand" [routerLink]="['login']" routerLinkActive="active"
+       >
+       login
+      </a>
+      <a
+      *ngIf="authentificationService.isauth()"
+      class="navbar-brand"  (click)="logout()">logout</a>
       <a class="navbar-brand" [routerLink]="['asyncpipe']" routerLinkActive="active">asyncpipe</a>
-
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

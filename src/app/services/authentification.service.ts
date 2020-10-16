@@ -8,9 +8,19 @@ const API_AUTH_LINK='https://immense-citadel-91115.herokuapp.com/api/Users/login
 export class AuthentificationService {
 
   constructor(private http : HttpClient) { }
+  isauth()
+  {
+   return !!localStorage.getItem('token');
+  }
+
   login(Credentials)
   {
     return this.http.post<any>(API_AUTH_LINK,Credentials);
+  }
+
+  logout()
+  {
+     localStorage.removeItem('token');
   }
 
 }

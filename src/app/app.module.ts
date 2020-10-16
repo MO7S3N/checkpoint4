@@ -51,7 +51,7 @@ import { HttpComponent } from './http/http.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
 
 
   ],
